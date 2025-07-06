@@ -21,16 +21,18 @@
 title: AutoMainBlog
 email: automaintyc@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Share
+  AutoMain blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Null
+twitter_username: AutoMain
 github_username:  AutoMaintyc
 
 # Build settings
-theme: minima
+theme: no-style-please
 plugins:
   - jekyll-feed
+
+include: [".md", ".markdown"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -40,14 +42,14 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
