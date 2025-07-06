@@ -28,7 +28,7 @@ twitter_username: AutoMain
 github_username:  AutoMaintyc
 
 # Build settings
-theme: no-style-please
+theme: just-the-docs
 plugins:
   - jekyll-feed
 
