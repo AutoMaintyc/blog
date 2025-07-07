@@ -30,8 +30,10 @@ github_username:  AutoMaintyc
 # Build settings
 theme: just-the-docs
 plugins:
-  - jekyll-feed
-
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sitemap
 include: [".md", ".markdown"]
 
 defaults:
