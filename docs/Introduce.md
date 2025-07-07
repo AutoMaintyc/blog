@@ -4,6 +4,7 @@ title:  "Introduce"
 date:   2025-07-06 09:40:39 +0800
 categories: jekyll update
 permalink: /Introduce/
+nav_order: 1
 ---
 
 ​本站内容是作者个人见解的分享，未必反映客观事实。
