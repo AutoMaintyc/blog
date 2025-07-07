@@ -36,6 +36,8 @@ plugins:
   - jekyll-sitemap
 include: [".md", ".markdown"]
 
+permalink: pretty
+
 defaults:
   - scope:
       path: "docs" # an empty string here means all files in the project
@@ -63,3 +65,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md
