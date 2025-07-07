@@ -1,5 +1,5 @@
 ---
-layout: post\archive\
+layout: post
 title:  "AB包"
 date:   2025-07-06 09:40:39 +0800
 permalink: /AB包/
