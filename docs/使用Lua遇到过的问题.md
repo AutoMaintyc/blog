@@ -6,3 +6,6 @@ permalink: /使用Lua遇到过的问题/
 ---
 
 # 使用Lua遇到过的问题
+
+# Playstation平台
+## 需要重新编译对应平台的lua
