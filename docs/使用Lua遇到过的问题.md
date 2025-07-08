@@ -49,7 +49,7 @@ PS5的: ${SCE_ROOT_DIR}/Prospero/Tools/CMake/PS5.cmake
 静态方法标记[LuaCallCSharp]特性
 CS.Namespace名.Class名.方法名（）
 ### C# Call Lua
-```C#
+```c#
 LuaEnv luaEnv = new LuaEnv();
 luaEnv.DoString("print('Hello from C#')");
 //清理
@@ -71,7 +71,7 @@ Lua会直接拷贝一份 被调用的C#变量，尽量不要直接把C#中的较
 模块文件必须通过 return 语句返回一个值  
 模块需要require后调用
 
-```Lua
+```lua
 -- autoMain.lua （模块）
 local AutoMain = {}
 -- 公共接口
@@ -88,7 +88,7 @@ return AutoMain
 在包目录下创建 init.lua，定义包入口  
 当执行 require("autoMainPackage") 时，Lua 会优先查找autoMainPackage/init.lua 文件作为包的入口
 
-```Lua
+```lua
 -- autoMainPackage/init.lua
 local autoMainPackage = {}
 --顶级代码，会直接调用
@@ -109,7 +109,7 @@ return autoMainPackage
 5、子模块回退机制​（尝试加载父模块）    
 
 ## 协程
-```Lua
+```lua
 coroutine.create()
 coroutine.wrap()
 coroutine.resume()
@@ -144,7 +144,7 @@ Rehash ≠ 扩容
 ### metaTable
 metaTable​​ 是一个普通表，通过 setmetatable(t, mt) 关联到目标表 t，用于拦截其特定操作  
 示例代码：  
-``` Lua
+```lua
 local t = { a = 1 }
 local mt = {
     __index = function(_, key) 
