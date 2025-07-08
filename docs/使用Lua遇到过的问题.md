@@ -49,7 +49,7 @@ PS5的: ${SCE_ROOT_DIR}/Prospero/Tools/CMake/PS5.cmake
 静态方法标记[LuaCallCSharp]特性
 CS.Namespace名.Class名.方法名（）
 ### C# Call Lua
-``` C#
+```C#
 LuaEnv luaEnv = new LuaEnv();
 luaEnv.DoString("print('Hello from C#')");
 //清理
