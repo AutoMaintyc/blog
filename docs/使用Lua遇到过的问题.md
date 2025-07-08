@@ -60,8 +60,7 @@ luaEnv.Dispose();
 luaEnv.Global.Get<int>("变量名"); 
 luaEnv.Global.Get<string>("变量名"); 
 ```
-XLua源： https://github.com/Tencent/xLua
-
+[XLua源](https://github.com/Tencent/xLua)
 ### 变量
 Lua会直接拷贝一份 被调用的C#变量，尽量不要直接把C#中的较大的数据变量直接用
 
@@ -154,7 +153,7 @@ local mt = {
 setmetatable(t, mt)
 print(t.b) -- 输出：Key 'b' not found! [1,4](@ref)
 ```
-详情： https://www.runoob.com/lua/lua-metatables.html
+[详情](https://www.runoob.com/lua/lua-metatables.html)
 
 ## pcall和xpcall
 安全调用函数,避免崩溃  
