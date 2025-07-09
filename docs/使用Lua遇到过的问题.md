@@ -116,6 +116,85 @@ coroutine.yield()
 ```
 
 ## 面向对象
+### 实现
+```lua
+-- 多继承类工厂函数 [2,7](@ref)
+function MultiClass(...)
+    local parents = {...} -- 存储所有父类
+    local cls = {}
+
+    -- 多继承元表：遍历父类查找方法/属性
+    setmetatable(cls, {
+        __index = function(_, key)
+            for i = 1, #parents do
+                local value = parents[i][key]
+                if value then return value end
+            end
+        end
+    })
+
+    -- 构造函数
+    function cls:new(...)
+        local obj = {}
+        -- 设置实例的元表指向当前类
+        setmetatable(obj, { __index = cls })
+        -- 调用初始化方法（若存在）
+        if type(obj.ctor) == "function" then
+            obj:ctor(...)
+        end
+        return obj
+    end
+    return cls
+end
+```
+### 使用
+以下代码为AI提供
+基类1
+```lua
+-- 移动能力基类
+local Movable = {}
+function Movable:move()
+    print(string.format("%s moved with speed %d", self.name, self.speed))
+end
+```
+
+基类2
+```lua
+-- 攻击能力基类（封装私有数据）
+local Attackable = {}
+function Attackable:ctor()
+    local _attackPower = 10 -- 私有变量
+    -- 公共接口访问私有数据
+    function self:setPower(power)
+        _attackPower = power
+    end
+    function self:getPower()
+        return _attackPower
+    end
+end
+function Attackable:attack(target)
+    print(string.format("%s attacked %s! Power: %d", 
+        self.name, target, self:getPower()))
+end
+```
+
+多继承子类​
+```lua
+local Warrior = MultiClass(Movable, Attackable)
+
+function Warrior:ctor(name, speed)
+    self.name = name
+    self.speed = speed
+    Attackable.ctor(self) -- 显式调用父类初始化
+end
+
+-- 使用示例
+local conan = Warrior:new("Conan", 8)
+conan:setPower(15)       -- 调用封装方法修改私有数据
+conan:move()             --> Conan moved with speed 8
+conan:attack("Dragon")   --> Conan attacked Dragon! Power: 15
+```
+
 ## 内存管理（垃圾收集）
 ## 闭包
 ## 反射
