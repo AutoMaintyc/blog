@@ -148,7 +148,7 @@ function MultiClass(...)
 end
 ```
 ### 使用
-以下代码为AI提供
+以下代码为AI提供  
 基类1
 ```lua
 -- 移动能力基类
