@@ -3,7 +3,7 @@ title: "字典Hash"  # 覆盖默认分组标题
 parent: C#
 ---
 
-
+[源码](https://github.com/dotnet/runtime/blob/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/Dictionary.cs)
 # 字典Hash
 
 默认字典非线程安全，多线程场景用 ConcurrentDictionary<TKey, TValue>
