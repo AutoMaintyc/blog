@@ -196,8 +196,13 @@ conan:attack("Dragon")   --> Conan attacked Dragon! Power: 15
 ```
 
 ## 内存管理（垃圾收集）
+Lua自动处理，标记-清除算法。弱引用表、​​析构器
 ## 闭包
+函数“记住”并访问其定义时的作用域中的变量  
+注意内存泄漏
 ## 反射
+type()函数  
+通过require或loadstring动态替换函数
 ## 序列化
 
 ## pairs和ipairs
