@@ -15,3 +15,18 @@ parent: C#
 链地址法：头插法  
 质数容量优化：质数，减少哈希取模后的分布不均匀性，降低冲突概率  
 空闲条目复用​​：删除条目时，字典不会立即释放空间  
+## 线程安全
+C# 的 Dictionary<TKey, TValue> 不是线程安全的。  
+ConcurrentDictionary<TKey, TValue> 是线程安全的。
+
+### 非要用Dictionary，可以用lock
+
+```C#
+Dictionary<string, int> dict = new Dictionary<string, int>();
+object locker = new object();
+
+lock (locker)
+{
+    dict["a"] = 10;
+}
+```
